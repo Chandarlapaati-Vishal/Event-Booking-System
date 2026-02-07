@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Event Booking</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+
+    <h1>Upcoming Events</h1>
+
+    {% for event in events %}
+    <div class="event-card">
+        <h2>{{ event[1] }}</h2>
+        <p>{{ event[2] }}</p>
+        <p>Date: {{ event[3] }}</p>
+        <p>Location: {{ event[4] }}</p>
+        <a href="/event/{{ event[0] }}">View Details</a>
+    </div>
+    {% endfor %}
+
+    <br>
+    <a href="/login">Login</a> |
+    <a href="/register">Register</a>
+
+</body>
+
+</html>
